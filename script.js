@@ -1,45 +1,14 @@
 /*
-O que é uma função construtora?
-Nesta aula, vamos aprender sobre funções construtoras em JavaScript. Vamos criar uma função construtora para instanciar objetos, explicando o uso do operador new. Também vamos criar objetos com propriedades e métodos, além de exemplificar a instância de objetos com a função construtora. Também veremos a possibilidade de usar funções construtoras disponíveis no JavaScript, como String e Date. Além disso, vamos aprender uma abordagem alternativa para criar objetos usando funções construtoras.
+Nesta aula, vamos aprender como exibir o conteúdo de uma string em maiúsculo e minúsculo no JavaScript. Vamos usar o método toUpperCase para transformar o texto em maiúsculo e o método toLowerCase para transformar em minúsculo. Esses métodos não modificam o conteúdo da variável, apenas exibem o texto de acordo com a formatação desejada. Essas são opções úteis para manipular strings no JavaScript.
+
 */
 
-function createProduct(name){
-    const product = {}
-    
-    product.name = name
-    product.details = function(){
-        console.log(`O nome do produto é: ${this.name}`)
-    }
-    return product
-}
+let message = "Estou estudando os fundamentos do Javascript."
 
-const product1 = new createProduct('Caneta')
-console.log(product1.name)
-product1.details()
+console.log(message)
 
-const product2 = new createProduct('Mouse')
-console.log(product2.name)
-product2.details()
+//Exibir o textyo em maiusculo
+console.log(message.toUpperCase())
 
-//exemplos de funções construtoras dusponíveis no JS
-
-let myName = new String('Murilo')
-console.log(myName)
-
-let price = "40.6".replace(".", "")
-console.log(price)
-
-let date = new Date("2025-01-05")
-    console.log(date)
-
-function Person(name){
-    this.name = name
-    this.message = function (){
-        console.log(`Olá ${this.name}`)
-    }
-}
-
-const person1 = new Person('Murilo')
-console.log(person1.name)
-person1.message()
-    
+//Exibir o texto em minúsculo
+console.log(message.toLowerCase())
