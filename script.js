@@ -1,14 +1,28 @@
-const product = {
-    name: "Teclado",
-    quantity: 100,
+/* Optional chaining
+    encadeamento opcional.
+    Se a propriedade não existir, ele retorna undefined.
+    Se a propriedade existir, ele retorna o valor da propriedade.
+    Útil ao explora ro conteúdo de um objeto
+    quando não existe garantia de que a propriedade exista.
+*/
+
+const user = {
+    id: 1,
+    name: 'Murilo',
+    // address: {
+    //     street: 'Rua da República',
+    //     city: "São Paulo",
+    //     geo: {
+    //         lat: -23.55,
+    //         lng: -46.65
+    //     },
+    // },
+
+    message: function () {
+        console.log(`Olá, ${this.name}`)
+    }
 }
 
-//Atualizando o valor de uma propriedade de  um objeto
-console.log(product.quantity),
-product.quantity = 90, // usando notação de ponto
-console.log(product.quantity)
+console.log(user?.address?.street)
 
-console.log(product.name)
-product['name'] = "Mouse" // usando a notação de colchetes
-console.log(product.name)
-
+user.message?.()
