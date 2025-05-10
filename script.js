@@ -1,14 +1,45 @@
-/* 
-Operador de coalescência nula
-Nesta aula, vamos entender mais sobre o operador de coalescência nula em JavaScript. Vamos entender como ele retorna o operando do lado direito quando o do lado esquerdo é nulo ou undefined. Veremos na prática como usar para verificar se uma variável tem conteúdo ou não. Esse operador é útil para fazer verificações em diferentes cenários de programação.
+/*
+O que é uma função construtora?
+Nesta aula, vamos aprender sobre funções construtoras em JavaScript. Vamos criar uma função construtora para instanciar objetos, explicando o uso do operador new. Também vamos criar objetos com propriedades e métodos, além de exemplificar a instância de objetos com a função construtora. Também veremos a possibilidade de usar funções construtoras disponíveis no JavaScript, como String e Date. Além disso, vamos aprender uma abordagem alternativa para criar objetos usando funções construtoras.
 */
 
-let content = "Olá, Murilo Souza"
-console.log(content ?? "Conteúdo padrão") // Mostra se tiver conteúdo, e se nao tiver, vai exibir o segundo parametro.
-
-const user = {
-    name: 'Murilo',
-    avatar: undefined
+function createProduct(name){
+    const product = {}
+    
+    product.name = name
+    product.details = function(){
+        console.log(`O nome do produto é: ${this.name}`)
+    }
+    return product
 }
 
-console.log(user.avatar ?? "default.png")
+const product1 = new createProduct('Caneta')
+console.log(product1.name)
+product1.details()
+
+const product2 = new createProduct('Mouse')
+console.log(product2.name)
+product2.details()
+
+//exemplos de funções construtoras dusponíveis no JS
+
+let myName = new String('Murilo')
+console.log(myName)
+
+let price = "40.6".replace(".", "")
+console.log(price)
+
+let date = new Date("2025-01-05")
+    console.log(date)
+
+function Person(name){
+    this.name = name
+    this.message = function (){
+        console.log(`Olá ${this.name}`)
+    }
+}
+
+const person1 = new Person('Murilo')
+console.log(person1.name)
+person1.message()
+    
