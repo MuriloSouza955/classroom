@@ -23,6 +23,7 @@ const user = {
     }
 }
 
+//Usando o ponto de interrogação, caso a propriedade não exista, ele retorna undefined
 console.log(user?.address?.street)
 
 user.message?.()
