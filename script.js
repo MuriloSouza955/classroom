@@ -1,29 +1,14 @@
-/* Optional chaining
-    encadeamento opcional.
-    Se a propriedade não existir, ele retorna undefined.
-    Se a propriedade existir, ele retorna o valor da propriedade.
-    Útil ao explora ro conteúdo de um objeto
-    quando não existe garantia de que a propriedade exista.
+/* 
+Operador de coalescência nula
+Nesta aula, vamos entender mais sobre o operador de coalescência nula em JavaScript. Vamos entender como ele retorna o operando do lado direito quando o do lado esquerdo é nulo ou undefined. Veremos na prática como usar para verificar se uma variável tem conteúdo ou não. Esse operador é útil para fazer verificações em diferentes cenários de programação.
 */
 
-const user = {
-    id: 1,
-    name: 'Murilo',
-    // address: {
-    //     street: 'Rua da República',
-    //     city: "São Paulo",
-    //     geo: {
-    //         lat: -23.55,
-    //         lng: -46.65
-    //     },
-    // },
+let content = "Olá, Murilo Souza"
+console.log(content ?? "Conteúdo padrão") // Mostra se tiver conteúdo, e se nao tiver, vai exibir o segundo parametro.
 
-    message: function () {
-        console.log(`Olá, ${this.name}`)
-    }
+const user = {
+    name: 'Murilo',
+    avatar: undefined
 }
 
-//Usando o ponto de interrogação, caso a propriedade não exista, ele retorna undefined
-console.log(user?.address?.street)
-
-user.message?.()
+console.log(user.avatar ?? "default.png")
