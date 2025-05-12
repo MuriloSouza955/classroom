@@ -1,17 +1,10 @@
 /*
-Criando e acessando um array
-Nesta aula, vamos entender como criar e acessar itens de um array em JavaScript. Também abordaremos como acessar dinamicamente o último item do array, evitando erros ao tentar acessar índices que não existem.
+Convertendo uma string para array
+Nesta aula, vamos aprender como converter uma string em um array utilizando o método split. Essa técnica pode ser útil para separar letras ou palavras em um array.
 
 */
 
-let fruits = ["Banana", "Mango", "Kiwi", "Goiaba", "Maçã"];
+let fullName =  "Murilo Souza";
+console.log(fullName.split(" ")); // cria um array com os nomes separados por espaço
 
-console.log(fruits);
-console.log(fruits.length);
-
-// Acessando os itens do array pelo seu índice
-console.log(fruits[0]);
-console.log(fruits[1]);
-console.log(fruits[2]);
-
-console.log(fruits[fruits.length - 1]); // Último item do array
+console.log(Array.from(fullName)); // cria um array com as letras do nome
