@@ -1,15 +1,17 @@
 /*
-Criando um array com um construtor
-Nesta aula, vamos criar um array utilizando o construtor em JavaScript. Veremos a diferença entre colchetes para arrays e chaves para objetos. Vamos criar um array vazio e como especificar o tamanho do array ao criá-lo. Também veremos sobre a propriedade length para medir o comprimento de um array.
+Criando e acessando um array
+Nesta aula, vamos entender como criar e acessar itens de um array em JavaScript. Também abordaremos como acessar dinamicamente o último item do array, evitando erros ao tentar acessar índices que não existem.
 
 */
 
-const newArray = new Array();
-console.log(newArray);
-console.log("Murilo".length)
+let fruits = ["Banana", "Mango", "Kiwi", "Goiaba", "Maçã"];
 
-console.log(newArray.length)
+console.log(fruits);
+console.log(fruits.length);
 
-const availabre = new Array(10);
-console.log(availabre);
-console.log(availabre.length);
+// Acessando os itens do array pelo seu índice
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+
+console.log(fruits[fruits.length - 1]); // Último item do array
