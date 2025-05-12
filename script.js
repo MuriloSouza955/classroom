@@ -1,20 +1,21 @@
 /*
-Separando e unindo strings
-Nesta aula, vamos aprender a dividir e unir textos utilizando os métodos disponíveis. Vamos usar o método split() para quebrar um texto com base em um caractere específico, gerando um array com as partes separadas. Também exploraremos o método join para unir as partes do texto separadas anteriormente, podendo definir um novo caractere como separador. Essas técnicas são úteis para manipular textos de forma eficiente, seja para separar palavras-chave ou para unir informações.
+Encontrando um conteúdo no texto
+Nesta aula, vamos aprender a verificar a existência e a posição de um conteúdo em uma string no JavaScript. Utilizaremos o método indexOf() para encontrar a posição de uma palavra e o método includes para verificar se uma palavra ou conteúdo existe na string. É importante lembrar que o JavaScript é "case sensitive", ou seja, faz diferença entre maiúsculas e minúsculas. Podemos combinar esses métodos com toLowerCase e toUpperCase para facilitar as comparações. Esses métodos são úteis para diversas aplicações.
 
 */
 
-let text = "Estudar, Aprender, Praticar";
+let message = "Estou estudando os fundamentos do JavaScript"
 
-let separate = text.split(",");
+// Obtém a posição da palavra.
+console.log(message.indexOf("estudando"))
 
-console.log(separate);
+//Quando nao encontra a palavra, retorna -1.
+console.log(message.indexOf("javascript"))
 
-let message = "Estou aprendendo Javascript";
-console.log(message.split(" "));
+//uma saida, para "driblar" o case sentivive, é usar o método toLowerCase ou toUpperCase.
+console.log(message.toLowerCase().indexOf("javascript"))
+console.log(message.toUpperCase().indexOf("JAVASCRIPT"))
 
-//Adicionando um caractere, por exemplo "_" para unir o texto
-console.log(message.split(" ").join("_"));
-
-//Usando o método join para unir o texto
-console.log(separate.join("_"));
+// Verifica se a palavra existe na string.
+console.log(message.includes("JavaScript"))
+console.log(message.includes("HTML"))
