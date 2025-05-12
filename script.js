@@ -1,10 +1,6 @@
 /*
-Convertendo uma string para array
-Nesta aula, vamos aprender como converter uma string em um array utilizando o método split. Essa técnica pode ser útil para separar letras ou palavras em um array.
+Adicionando e removendo um item do array
+Nesta aula, aprenderemos a adicionar e remover itens em um array em JavaScript. Utilizamos os métodos push para adicionar no final, unshift para adicionar no início, shift para remover do início e pop para remover do final do array. Esses métodos são úteis para manipular arrays de forma eficiente em aplicações JavaScript.
 
 */
 
-let fullName =  "Murilo Souza";
-console.log(fullName.split(" ")); // cria um array com os nomes separados por espaço
-
-console.log(Array.from(fullName)); // cria um array com as letras do nome
