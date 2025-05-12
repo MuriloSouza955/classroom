@@ -1,22 +1,13 @@
 /*
-Quais elementos o array aceita?
-Nesta aula, vamos ver que um array pode conter elementos de diferentes tipos de dados, como texto, números, booleanos, funções e objetos.
+Verificando se existe um conteúdo no array
+Nesta aula, vamos aprender como verificar se um item existe em um array utilizando o método includes retornando verdadeiro ou falso. O método includes é uma ferramenta muito útil para essa finalidade.
 
 */
 
-let myArray = [
-    "Texto",
-    123,
-    true,
-    function umaFuncao() {
-        console.log("Eu sou uma função")
-    },
-    { name: "Murilo", age: 25 },
-    [1, 2, 3, 4, 5],
-    new Date(),
-    null,
-    undefined,
-]
-console.log(myArray)
+let fruits = ['banana', 'limão', 'maçã'];
 
-myArray[3]() // Chama a função que está dentro do array
+//Verificar se um item existe no array
+let hasBanana = fruits.includes('banana');
+console.log(hasBanana); // true
+let hasStrawberry = fruits.includes('morango');
+console.log(hasStrawberry); // false
