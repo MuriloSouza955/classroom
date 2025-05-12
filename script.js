@@ -1,20 +1,20 @@
 /*
-Completando uma string
-Nesta aula, vamos aprender a manipular strings em JavaScript. Veremos um exemplo prático de ocultar os primeiros dígitos de um número de cartão de crédito e exibir apenas os últimos quatro dígitos. Utilizaremos métodos como slice para pegar os últimos dígitos e padStart() para preencher a string com caracteres específicos. Também veremos o método padEnd() para preencher strings no final. Esses métodos são úteis para manipular e formatar strings de forma dinâmica.
+Separando e unindo strings
+Nesta aula, vamos aprender a dividir e unir textos utilizando os métodos disponíveis. Vamos usar o método split() para quebrar um texto com base em um caractere específico, gerando um array com as partes separadas. Também exploraremos o método join para unir as partes do texto separadas anteriormente, podendo definir um novo caractere como separador. Essas técnicas são úteis para manipular textos de forma eficiente, seja para separar palavras-chave ou para unir informações.
 
 */
 
-const creditCard = "1234567812344928";
-// console.log(creditCard.length);
+let text = "Estudar, Aprender, Praticar";
 
-//Pegar os 4 últimos dígitos
-const lastDigits = creditCard.slice(-4);
-// console.log(lastDigits);
+let separate = text.split(",");
 
-// Deixa apenas os 4 ultimos digitos visiveis
-const maskesNunber = lastDigits.padStart(creditCard.length, "X");
-console.log(maskesNunber);
+console.log(separate);
 
-//Utilizando o método padEnd() para preencher a string com caracteres específicos
-const number = "123"
-console.log(number.padEnd(10, "#"));
+let message = "Estou aprendendo Javascript";
+console.log(message.split(" "));
+
+//Adicionando um caractere, por exemplo "_" para unir o texto
+console.log(message.split(" ").join("_"));
+
+//Usando o método join para unir o texto
+console.log(separate.join("_"));
