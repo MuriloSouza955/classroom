@@ -1,6 +1,15 @@
 /*
-Aprendendo sobre arrays
-Nesta aula, vamos aprender o conceito de array, que é uma coleção ordenada de valores, onde cada item possui uma posição específica chamada de índice. Vamos fazer uma analogia com uma caixa de correio com compartimentos numerados, representando os índices do array. Vamos aprender também que os índices começam do zero e vão até um número determinado, sendo o total de índices igual ao número final menos um.
+Criando um array com um construtor
+Nesta aula, vamos criar um array utilizando o construtor em JavaScript. Veremos a diferença entre colchetes para arrays e chaves para objetos. Vamos criar um array vazio e como especificar o tamanho do array ao criá-lo. Também veremos sobre a propriedade length para medir o comprimento de um array.
 
 */
 
+const newArray = new Array();
+console.log(newArray);
+console.log("Murilo".length)
+
+console.log(newArray.length)
+
+const availabre = new Array(10);
+console.log(availabre);
+console.log(availabre.length);
