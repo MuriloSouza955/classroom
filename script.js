@@ -1,21 +1,18 @@
 /*
-Adicionando e removendo um item do array
-Nesta aula, aprenderemos a adicionar e remover itens em um array em JavaScript. Utilizamos os métodos push para adicionar no final, unshift para adicionar no início, shift para remover do início e pop para remover do final do array. Esses métodos são úteis para manipular arrays de forma eficiente em aplicações JavaScript.
-
+Usando o índice
+Nesta aula, vamos aprender como obter a posição de um item em um array, utilizando o método indexOf. Também iremos aprender a deletar um item específico pelo índice, utilizando o método splice. O método splice permite remover elementos a partir de uma posição específica no array.
 */
-let users = []
-console.log(users)
 
-users.push('Murilo') // Adicionando um item no final do array
+let fruits = ['banana', 'apple', 'orange', 'grape'];
+console.log(fruits);
 
-users.push('Lucas') // Adicionando outro item no final do array
+// Obtendo a posição de um item em um array
+let position = fruits.indexOf('orange');
+console.log(position);
 
-users.push('João') // Adicionando mais um item no final do array
+// fruits.splice(1, 2); // Removendo itens a partir do índice 1, removendo 2 itens
+// O array fruits agora é ['banana', 'grape']
 
-users.unshift('Ana') // Adicionando um item no início do array
+fruits.splice(position, 1); // Removendo o item 'orange' do array
 
-users.shift() // Removendo o primeiro item do array ('Ana')
-
-users.pop() // Removendo o último item do array ('João')
-
-console.log(users) // Exibindo o array atualizado
+console.log(fruits);
