@@ -1,9 +1,22 @@
 /*
-Loop for
-Nesta aula, vamos aprender sobre a estrutura de repetição for, destacando a variável de controle, a condição e o incremento. Vamos ver na prática um exemplo de tabuada usando for para simplificar o código. O for é uma ferramenta poderosa para automatizar tarefas repetitivas de forma eficiente e concisa.
+For in
+Nesta aula, vamos aprender sobre a estrutura de repetição for in, que permite iterar sobre as propriedades de um objeto. Também foi mostrado como utilizar o for in com arrays, percorrendo seus índices ou elementos. O for in é uma ferramenta útil para percorrer objetos e arrays de forma eficiente.
 */
 
-console.log("### Tabuada do 5 ###");
-for (step = 1; step <= 10; step++) {
-  console.log(`5 x ${step} = ${5 * step}`);
+let person = {
+    name: "Murilo",
+    age: 30,
+    city: "Santa Catarina",
+    state: "SC",
+    country: "Brasil"
+}
+
+for (let property in person) {
+    console.log(property + ": " + person[property]); // Exibe o nome da propriedade e seu valor
+}
+console.log("======================");
+
+let students = ["Murilo", "Lucas", "João", "Maria", "Ana"];
+for (let index in students) {
+    console.log(students[index]);
 }
