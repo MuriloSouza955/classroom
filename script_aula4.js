@@ -1,13 +1,14 @@
 /*
-Loop infinito
-Nesta aula, vamos aprender o conceito de loop infinito, uma estrutura de repetição que não tem fim. Veremos na prática como isso pode sobrecarregar a memória do computador, tornando o navegador lento e travando. É essencial compreender esse conceito para evitar problemas de desempenho.
+Loop do while
+Nesta aula, vamos abordar a estrutura de repetição do while. Essa estrutura executa pelo menos uma vez, verificando a condição no final. Foi destacado que a verificação da condição ocorre no final, garantindo a execução do bloco pelo menos uma vez. A diferença do do while é que ele executa antes de verificar a condição.
 */
 
-let value = true
+// Exemplo de uso do loop do while
+let value = 0;
+do{
+    console.log("Estou dentro do loop do while");
+    console.log("Valor atual: " + value);
+    value ++;
+    console.log("Valor atual: " + value);
 
-// while (value) {
-//     console.log("Loop infinito")
-//     // O loop infinito continua a executar indefinidamente, imprimindo "Loop infinito" no console.
-//     // Para interromper o loop, você pode usar Ctrl + C no terminal ou fechar o navegador.
-//     // Isso pode causar lentidão e travamento do navegador, então tenha cuidado ao executar este código.
-// }
+}while(value < 10)
