@@ -1,28 +1,11 @@
 /*
-Break
-Nesta aula, vamos aprender um pouco mais sobre o uso da palavra reservada break para encerrar a execução de repetições, como no caso do switch case e em estruturas de repetição como o for. No exemplo do switch case, o break é utilizado para encerrar a execução de um caso e evitar a continuação para os próximos casos. Já no for, o break é usado para interromper a repetição em um determinado momento. O break é útil para controlar o fluxo de execução do código.
+Continue
+Agora vamos aprender sobre a palavra reservada continue que pode ser utilizada em estruturas de repetição para pular uma iteração e ir para a próxima, sem encerrar o loop inteiro como o break faz. Quando a condição definida é atendida, o continue é acionado, pulando a execução da iteração atual. Isso é útil para evitar a execução de determinadas partes do código em loops.
 */
 
-let option = 3
-
-switch (option) {
-    case 1:
-        console.log('Opção 1')
-        break
-    case 2:
-        console.log('Opção 2')
-        break
-    case 3:
-        console.log('Opção 3')
-        break
-    default:
-        console.log('Opção inválida')
-}
-
-// utilizando o break em um loop for
-for (let i = 0; i < 5; i++) {
-    if (i === 3) {
-        break
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        continue; // Pula a iteração quando i é igual a 5
     }
-    console.log(i)
+    console.log(i); // Exibe os números de 0 a 9, exceto o 5
 }
