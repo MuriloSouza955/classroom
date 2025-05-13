@@ -1,18 +1,13 @@
 /*
-Loop while
-Nesta aula, abordaremos a estrutura de repetição while, que executa um bloco de código enquanto uma condição é verdadeira. Vamos aprender como declarar e utilizar o while, com exemplos de verificação de condições e controle de execução. Também vamos utilizar a variável de controle execute para decidir se a repetição deve ou não continuar. Além disso vamos ver como utilizar o método prompt para interagir com o usuário e controlar a execução do while.
+Loop infinito
+Nesta aula, vamos aprender o conceito de loop infinito, uma estrutura de repetição que não tem fim. Veremos na prática como isso pode sobrecarregar a memória do computador, tornando o navegador lento e travando. É essencial compreender esse conceito para evitar problemas de desempenho.
 */
 
+let value = true
 
-let execute = true;
-
-while (execute) {
-    let response = window.prompt('Deseja continuar? (s/n)');
-    if (response.toLowerCase() === 's') {
-        execute = true;
-    } else {
-        execute = false;
-    }
-}
-
-console.log('Fim da execução!');
+// while (value) {
+//     console.log("Loop infinito")
+//     // O loop infinito continua a executar indefinidamente, imprimindo "Loop infinito" no console.
+//     // Para interromper o loop, você pode usar Ctrl + C no terminal ou fechar o navegador.
+//     // Isso pode causar lentidão e travamento do navegador, então tenha cuidado ao executar este código.
+// }
