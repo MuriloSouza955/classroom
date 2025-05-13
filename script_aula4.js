@@ -1,14 +1,9 @@
 /*
-Loop do while
-Nesta aula, vamos abordar a estrutura de repetição do while. Essa estrutura executa pelo menos uma vez, verificando a condição no final. Foi destacado que a verificação da condição ocorre no final, garantindo a execução do bloco pelo menos uma vez. A diferença do do while é que ele executa antes de verificar a condição.
+Loop for
+Nesta aula, vamos aprender sobre a estrutura de repetição for, destacando a variável de controle, a condição e o incremento. Vamos ver na prática um exemplo de tabuada usando for para simplificar o código. O for é uma ferramenta poderosa para automatizar tarefas repetitivas de forma eficiente e concisa.
 */
 
-// Exemplo de uso do loop do while
-let value = 0;
-do{
-    console.log("Estou dentro do loop do while");
-    console.log("Valor atual: " + value);
-    value ++;
-    console.log("Valor atual: " + value);
-
-}while(value < 10)
+console.log("### Tabuada do 5 ###");
+for (step = 1; step <= 10; step++) {
+  console.log(`5 x ${step} = ${5 * step}`);
+}
