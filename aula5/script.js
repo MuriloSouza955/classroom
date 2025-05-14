@@ -132,7 +132,7 @@ Usando o toLocaleString()
 Nesta aula, vamos aprender o método toLocaleString(), um recurso poderoso para formatação de data e hora.
 */
 
-let date = new Date("2024-07-02T14:30:10");
+// let date = new Date("2024-07-02T14:30:10");
 // console.log(date.toLocaleString());
 
 // console.log(date.toLocaleString("pt-BR")); // Formato brasileiro
@@ -148,44 +148,61 @@ let date = new Date("2024-07-02T14:30:10");
 // console.log(date.toLocaleString("ru-RU")); // Formato russo
 // console.log(date.toLocaleString("pt-PT")); // Formato português de Portugal
 
-console.log(
-    date.toLocaleString("pt-BR", {
-        dateStyle: "short"
-    })
-)
-console.log(
-    date.toLocaleString("pt-BR", {
-        dateStyle: "long"
-    })
-)
-console.log(
-    date.toLocaleString("pt-BR", {
-        dateStyle: "medium"
-    })
-)
+// console.log(
+//     date.toLocaleString("pt-BR", {
+//         dateStyle: "short"
+//     })
+// )
+// console.log(
+//     date.toLocaleString("pt-BR", {
+//         dateStyle: "long"
+//     })
+// )
+// console.log(
+//     date.toLocaleString("pt-BR", {
+//         dateStyle: "medium"
+//     })
+// )
 
-console.log(
-    date.toLocaleString("pt-BR", {
-        dateStyle: "full"
-    })
-)
+// console.log(
+//     date.toLocaleString("pt-BR", {
+//         dateStyle: "full"
+//     })
+// )
 
-console.log(
-    date.toLocaleDateString("pt-BR", {
-        day: "2-digit",
-        month: "2-digit",
-        hour: "2-digit",
-        minute: "2-digit",
-    })
-)
+// console.log(
+//     date.toLocaleDateString("pt-BR", {
+//         day: "2-digit",
+//         month: "2-digit",
+//         hour: "2-digit",
+//         minute: "2-digit",
+//     })
+// )
 
-let amount = 12.5;
-console.log(amount.toLocaleString("pt-BR", {
-    style: "currency",
-    currency: "BRL"
-}));
+// let amount = 12.5;
+// console.log(amount.toLocaleString("pt-BR", {
+//     style: "currency",
+//     currency: "BRL"
+// }));
 
 /*  AULA 09 - JavaScript
 Aprendendo sobre fuso horário
 Nesta aula, abordaremos o conceito de fuso horário, destacando o timestamp como um valor crucial para lidar com data e hora. O timestamp representa um ponto específico no tempo, sendo uma contagem de segundos ou milissegundos desde a referência, que é a meia-noite de 1 de janeiro de 1970 no padrão UTC. O JavaScript utiliza esse padrão como base. Existem duas maneiras de interpretar data e hora: local e UTC. O fuso horário local é determinado pelo ambiente de execução, como o navegador do usuário.
 */
+
+/* AULA 10 - JavaScript
+Conhecendo a Intl
+Nesta aula, veremos mais sobre a utilização da API INTL do JavaScript para manipular data e hora. Vamos aprender como criar uma nova data, exibir informações como timezone e locale, e formatar a data de acordo com a localidade.
+*/
+//Obtém informações da localidae atual
+// const curentLocale = Intl.DateTimeFormat().resolvedOptions();
+// console.log(curentLocale);
+
+// //Exibe no formato padrão da localidade
+// console.log(new Intl.DateTimeFormat("pt-BR").format(new Date()));
+// console.log(new Intl.DateTimeFormat("en-US").format(new Date()));
+
+// const date = new Date();
+
+// console.log(date.getTimezoneOffset());// Obtém a diferença em minutos entre o horário local e o UTC
+// console.log(date.getTimezoneOffset() / 60); // Obtém a diferença em horas entre o horário local e o UTC
