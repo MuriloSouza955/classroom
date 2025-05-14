@@ -94,7 +94,7 @@ Nessa aula vamos aprender que existem vários métodos para manipular datas e ho
 
 // let year = (date.getFullYear().toString().padStart(4, "0")); // Formata para ter 4 dígitos na variavel date
 
-// console.log(date.getHours().toString().padStart(2, "0")); // Formata para 
+// console.log(date.getHours().toString().padStart(2, "0")); // Formata para
 // // console.log(date.getMinutes().toString().padStart(2, "0"));
 
 // let horas = date.getHours();
@@ -107,8 +107,22 @@ Convertendo uma data para string
 Nesta aula, iremos conhecer métodos para converter data e hora em strings específicas. Essas conversões são úteis para formatar datas e horas de maneira específica em JavaScript.
 */
 
+// let date = new Date("2024-07-02T14:30:00");
+// console.log(date.toString()); // Converte a data para string padrão
+// console.log(date.toDateString()); // Converte a data para string de data
+// console.log(date.toTimeString()); // Converte a data para string de hora
+
+/*
+Exibindo data e hora formatadas de acordo com a localidade
+Nesta aula, iremos aprender a exibir datas e horas de acordo com a localidade do usuário. Utilizaremos o toLocaleString para formatar a data e hora de acordo com a localidade do usuário.
+*/
+// Exibe a data e hora formatada de acordo com a localidade do usuário
 let date = new Date("2024-07-02T14:30:00");
-console.log(date.toString()); // Converte a data para string padrão
-console.log(date.toDateString()); // Converte a data para string de data
-console.log(date.toTimeString()); // Converte a data para string de hora
-console.log(date.toLocaleString()); // Converte a data para string local
+console.log(date.toLocaleString());
+console.log(date.toLocaleDateString()); //  Exibe apenas a data
+console.log(date.toLocaleTimeString()); // Exibe apenas a hora
+
+// Exibe a data e hora no formato escolhido pelo usuário
+console.log(date.toLocaleString("en"));
+console.log(date.toLocaleDateString("en"));
+console.log(date.toLocaleTimeString("en"));
