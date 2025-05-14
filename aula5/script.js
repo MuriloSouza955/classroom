@@ -86,18 +86,29 @@ Nessa aula vamos aprender que existem vários métodos para manipular datas e ho
     Nesta aula, aprenderemos a formatar data e hora em JavaScript. Utilizamos métodos como getDate, getMonth e padStart para garantir que os valores tenham sempre dois dígitos. Também veremos como montar uma string de data e hora personalizada, separando e formatando cada parte conforme desejado. É importante manter o padrão correto para evitar erros ao criar datas. Essas técnicas são úteis para exibir informações de data de forma clara e organizada em aplicações.
     */
 
-let date = new Date("July 3, 2025 10:30:00");
+// let date = new Date("July 3, 2025 10:30:00");
 
-let day = (date.getDate().toString().padStart(2, "0")); // Formata para ter 2 dígitos
+// let day = (date.getDate().toString().padStart(2, "0")); // Formata para ter 2 dígitos
 
-let month = (date.getMonth().toString().padStart(2, "0")); // Formata para ter 2 dígitos
+// let month = (date.getMonth().toString().padStart(2, "0")); // Formata para ter 2 dígitos
 
-let year = (date.getFullYear().toString().padStart(4, "0")); // Formata para ter 4 dígitos na variavel date
+// let year = (date.getFullYear().toString().padStart(4, "0")); // Formata para ter 4 dígitos na variavel date
 
-console.log(date.getHours().toString().padStart(2, "0")); // Formata para 
-// console.log(date.getMinutes().toString().padStart(2, "0"));
+// console.log(date.getHours().toString().padStart(2, "0")); // Formata para 
+// // console.log(date.getMinutes().toString().padStart(2, "0"));
 
-let horas = date.getHours();
-let minutos = date.getMinutes();
+// let horas = date.getHours();
+// let minutos = date.getMinutes();
 
-console.log(`${day}/${month}/${year}`);
+// console.log(`${day}/${month}/${year}`);
+
+/*
+Convertendo uma data para string
+Nesta aula, iremos conhecer métodos para converter data e hora em strings específicas. Essas conversões são úteis para formatar datas e horas de maneira específica em JavaScript.
+*/
+
+let date = new Date("2024-07-02T14:30:00");
+console.log(date.toString()); // Converte a data para string padrão
+console.log(date.toDateString()); // Converte a data para string de data
+console.log(date.toTimeString()); // Converte a data para string de hora
+console.log(date.toLocaleString()); // Converte a data para string local
