@@ -184,3 +184,8 @@ console.log(amount.toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL"
 }));
+
+/*  AULA 09 - JavaScript
+Aprendendo sobre fuso horário
+Nesta aula, abordaremos o conceito de fuso horário, destacando o timestamp como um valor crucial para lidar com data e hora. O timestamp representa um ponto específico no tempo, sendo uma contagem de segundos ou milissegundos desde a referência, que é a meia-noite de 1 de janeiro de 1970 no padrão UTC. O JavaScript utiliza esse padrão como base. Existem duas maneiras de interpretar data e hora: local e UTC. O fuso horário local é determinado pelo ambiente de execução, como o navegador do usuário.
+*/
