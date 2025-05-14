@@ -1,18 +1,12 @@
-/*  AULA 04 - Clases em JavaScript
-Adicionando métodos nas classes
-Nesta aula, vamos aprender como adicionar métodos em classes em JavaScript. Veremos que não é necessário usar a palavra-chave function ao definir um método dentro de uma classe.
+/*  AULA 05 - Clases em JavaScript
+O que é método estático?
+Nesta aula, vamos aprender o conceito de método estático em programação. Vamos ver como criar e utilizar um método estático em uma classe, destacando a diferença de acesso entre métodos estáticos e não estáticos. Demonstraremos que métodos estáticos podem ser acessados sem a necessidade de instanciar a classe, enquanto métodos não estáticos requerem a instanciação da classe.
 */
 
 class User {
-  constructor(name, email) {
-    this.name = name;
-    this.email = email;
-  }
-
-  sendEmail() {
-    console.log(`Enviando email para ${this.name} no endereço ${this.email}`);
-  }
+    static showMessage(message){
+        console.log(message);
+    }
 }
 
-const user = new User("Murilo", "murilo@email.com");
-user.sendEmail();
+User.showMessage("Esta é uma mensagem!");
