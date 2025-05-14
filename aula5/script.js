@@ -206,3 +206,14 @@ Nesta aula, veremos mais sobre a utilização da API INTL do JavaScript para man
 
 // console.log(date.getTimezoneOffset());// Obtém a diferença em minutos entre o horário local e o UTC
 // console.log(date.getTimezoneOffset() / 60); // Obtém a diferença em horas entre o horário local e o UTC
+
+/*  AULA 11 - JavaScript
+Criando uma data e hora com fuso horário
+Nesta aula, aprenderemos a criar uma data e hora com um fuso horário específico em JavaScript. Utilizaremos o método toISOString para obter o formato necessário e adicionaremos o deslocamento de fuso desejado. Ao adicionar ou subtrair horas do fuso, vamos ver como a hora é ajustada. A manipulação de fuso horário é essencial para lidar com diferentes fusos em aplicações que requerem precisão temporal.
+*/
+
+// const  dateWithTimeZone = new Date("2025-05-14T20:35:14.493-03:00");
+
+// // console.log(dateWithTimeZone.toLocaleString()); // Exibe a data e hora no formato local
+// console.log(new Date().toLocaleString()); // Exibe a data e hora no formato local
+// console.log(dateWithTimeZone.toLocaleString()); // Exibe a data e hora no formato local
