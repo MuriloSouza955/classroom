@@ -1,12 +1,16 @@
-/*  AULA 02 - Clases em JavaScript
-Criando uma classe com um método construtor
-Nesta aula, aprenderemos a criar uma classe em JavaScript, utilizando a palavra reservada class seguida do nome da classe no padrão Paschal Case. Vamos entender um pouco a diferença entre Camel Case, Snake Case e Paschal Case. Iremos definir o corpo da classe e criar um construtor, que é uma função especial executada automaticamente ao instanciar a classe.
+/*  AULA 03 - Clases em JavaScript
+Criando propriedades dentro das classes
+Nesta aula, vamos aprender um pouco mais sobre o uso do this em classes em JavaScript, mostrando como criar propriedades e acessá-las.
 */
 
-class Person {
-    constructor(name){
-        console.log("Olá, ", name);
+class Product {
+    constructor(name) {
+        this.name = name;
     }
 }
 
-const person1 = new Person("Murilo");
+const product1 = new Product("Notebook");
+console.log(product1.name);
+
+const product2 = new Product("Teclado");
+console.log(product2.name);
