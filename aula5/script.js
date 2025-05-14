@@ -19,7 +19,6 @@ Nesta aula, aprenderemos a definir uma data e hora específica em JavaScript. Ut
 
 // console.log(new Date(2025, 4, 13, 10, 30, 0)) // 10 horas, 30 minutos, 0 segundos
 
-
 // console.log(new Date("2025-05-13T10:30:00")) // string no formato especificado
 
 // console.log(new Date("May 13, 2025 10:30:00")) // string no formato especificado
@@ -54,29 +53,51 @@ Nessa aula vamos aprender que existem vários métodos para manipular datas e ho
 // //Segundos
 // console.log(date.getSeconds())
 
-/*  AULA 04 - JavaScript
-    Modificando a data e hora
-    Nessa aula, vamos aprender como modificar a data e hora em JavaScript. Utilizaremos métodos como setFullYear, setMonth, setDate para alterar o ano, mês e dia. Para modificar a hora, usaremos setHours, setMinutes e setSeconds.
-*/
+// /*  AULA 04 - JavaScript
+//     Modificando a data e hora
+//     Nessa aula, vamos aprender como modificar a data e hora em JavaScript. Utilizaremos métodos como setFullYear, setMonth, setDate para alterar o ano, mês e dia. Para modificar a hora, usaremos setHours, setMinutes e setSeconds.
+// */
+
+// let date = new Date("July 3, 2025 10:30:00");
+
+// //Modificando o ano
+// date.setFullYear(2018);
+
+// //Modificando o mês
+// date.setMonth(5);
+
+// //Modificando o dia
+// date.setDate(15);
+
+// //Modificando a hora
+// date.setHours(8);
+
+// //Modificando os minutos
+// date.setMinutes(45);
+
+// //Modificando os segundos
+// date.setSeconds(30);
+
+// console.log(date);
+
+/*  AULA 05 - JavaScript
+    Formatando a data e hora
+
+    Nesta aula, aprenderemos a formatar data e hora em JavaScript. Utilizamos métodos como getDate, getMonth e padStart para garantir que os valores tenham sempre dois dígitos. Também veremos como montar uma string de data e hora personalizada, separando e formatando cada parte conforme desejado. É importante manter o padrão correto para evitar erros ao criar datas. Essas técnicas são úteis para exibir informações de data de forma clara e organizada em aplicações.
+    */
 
 let date = new Date("July 3, 2025 10:30:00");
 
-//Modificando o ano
-date.setFullYear(2018);
+let day = (date.getDate().toString().padStart(2, "0")); // Formata para ter 2 dígitos
 
-//Modificando o mês
-date.setMonth(5);
+let month = (date.getMonth().toString().padStart(2, "0")); // Formata para ter 2 dígitos
 
-//Modificando o dia
-date.setDate(15);
+let year = (date.getFullYear().toString().padStart(4, "0")); // Formata para ter 4 dígitos na variavel date
 
-//Modificando a hora
-date.setHours(8);
+console.log(date.getHours().toString().padStart(2, "0")); // Formata para 
+// console.log(date.getMinutes().toString().padStart(2, "0"));
 
-//Modificando os minutos
-date.setMinutes(45);
+let horas = date.getHours();
+let minutos = date.getMinutes();
 
-//Modificando os segundos
-date.setSeconds(30);
-
-console.log(date);
+console.log(`${day}/${month}/${year}`);
