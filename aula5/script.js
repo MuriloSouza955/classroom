@@ -1,11 +1,82 @@
-/*
-Obtendo a data e a hora
-Nesta aula, vamos aprender como obter datas e horas no JavaScript.
-*/
-//Exibindo a data e hora atual
-console.log(new Date());
-//Exibindo a data e hora de marco 0 (1970)
-console.log(new Date(0));
+// /*  AULA 01 - JavaScript
+// Obtendo a data e a hora
+// Nesta aula, vamos aprender como obter datas e horas no JavaScript.
+// */
+// //Exibindo a data e hora atual
+// console.log(new Date());
+// //Exibindo a data e hora de marco 0 (1970)
+// console.log(new Date(0));
 
-//Exibindo a data e hora de marco 1970, até o momento em segundos
-console.log(new Date().getTime());
+// //Exibindo a data e hora de marco 1970, até o momento em segundos
+// console.log(new Date().getTime());
+
+// /*  AULA 02 - JavaScript
+/* Definindo uma data e uma hora específica
+Nesta aula, aprenderemos a definir uma data e hora específica em JavaScript. Utilizaremos o new Date para definir a data desejada, lembrando que os meses são contados de 0 a 11. Também exploraremos como definir a hora juntamente com a data. Além disso, veremos que é possível definir a data e hora utilizando uma string no formato específico. Essas diferentes abordagens nos dão várias possibilidades para trabalhar com datas e horas em JavaScript.
+// */
+
+// console.log(new Date(2025, 4, 13)) // JAN = 0, FEV = 1, MAR = 2, etc
+
+// console.log(new Date(2025, 4, 13, 10, 30, 0)) // 10 horas, 30 minutos, 0 segundos
+
+
+// console.log(new Date("2025-05-13T10:30:00")) // string no formato especificado
+
+// console.log(new Date("May 13, 2025 10:30:00")) // string no formato especificado
+
+/*  AULA 03 - JavaScript
+Métodos pra trabalhar com data e hora
+Nessa aula vamos aprender que existem vários métodos para manipular datas e horas. É possível criar uma data, obter o dia da semana, o dia do mês, o mês, o ano, a hora, os minutos e os segundos e muito mais.
+*/
+
+// let date = new Date("2025-04-02T14:30:00");
+// console.log(date)
+
+// //Domingo é 0, segunda-feira é 1, terça-feira é 2, etc
+// console.log(date.getDay())
+
+// // Dia do mes(0-30)
+
+// console.log(date.getDate())
+
+// //Mês(0-11)
+// console.log(date.getMonth())
+
+// //Ano
+// console.log(date.getFullYear())
+
+// //Hora
+// console.log(date.getHours())
+
+// //Minutos
+// console.log(date.getMinutes())
+
+// //Segundos
+// console.log(date.getSeconds())
+
+/*  AULA 04 - JavaScript
+    Modificando a data e hora
+    Nessa aula, vamos aprender como modificar a data e hora em JavaScript. Utilizaremos métodos como setFullYear, setMonth, setDate para alterar o ano, mês e dia. Para modificar a hora, usaremos setHours, setMinutes e setSeconds.
+*/
+
+let date = new Date("July 3, 2025 10:30:00");
+
+//Modificando o ano
+date.setFullYear(2018);
+
+//Modificando o mês
+date.setMonth(5);
+
+//Modificando o dia
+date.setDate(15);
+
+//Modificando a hora
+date.setHours(8);
+
+//Modificando os minutos
+date.setMinutes(45);
+
+//Modificando os segundos
+date.setSeconds(30);
+
+console.log(date);
