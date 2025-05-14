@@ -1,16 +1,18 @@
-/*  AULA 03 - Clases em JavaScript
-Criando propriedades dentro das classes
-Nesta aula, vamos aprender um pouco mais sobre o uso do this em classes em JavaScript, mostrando como criar propriedades e acessá-las.
+/*  AULA 04 - Clases em JavaScript
+Adicionando métodos nas classes
+Nesta aula, vamos aprender como adicionar métodos em classes em JavaScript. Veremos que não é necessário usar a palavra-chave function ao definir um método dentro de uma classe.
 */
 
-class Product {
-    constructor(name) {
-        this.name = name;
-    }
+class User {
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
+
+  sendEmail() {
+    console.log(`Enviando email para ${this.name} no endereço ${this.email}`);
+  }
 }
 
-const product1 = new Product("Notebook");
-console.log(product1.name);
-
-const product2 = new Product("Teclado");
-console.log(product2.name);
+const user = new User("Murilo", "murilo@email.com");
+user.sendEmail();
