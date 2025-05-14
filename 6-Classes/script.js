@@ -1,12 +1,24 @@
-/*  AULA 05 - Clases em JavaScript
-O que é método estático?
-Nesta aula, vamos aprender o conceito de método estático em programação. Vamos ver como criar e utilizar um método estático em uma classe, destacando a diferença de acesso entre métodos estáticos e não estáticos. Demonstraremos que métodos estáticos podem ser acessados sem a necessidade de instanciar a classe, enquanto métodos não estáticos requerem a instanciação da classe.
+/*  AULA 06 - Clases em JavaScript
+Como aplicar herança com classes?
+Nesta aula, vamos aprender como aplicar herança com classes em programação. A herança permite reutilizar propriedades e métodos de classes superiores.
 */
 
-class User {
-    static showMessage(message){
-        console.log(message);
-    }
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  makeNoise() {
+    console.log("Som genérico do animal");
+  }
 }
 
-User.showMessage("Esta é uma mensagem!");
+class Dog extends Animal {}
+class Cat extends Animal {}
+
+const dog = new Dog("Fido");
+console.log(dog.name);
+dog.makeNoise();
+
+const cat = new Cat("Felix");
+console.log(cat.name);
+cat.makeNoise();
