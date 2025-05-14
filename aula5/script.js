@@ -102,7 +102,7 @@ Nessa aula vamos aprender que existem vários métodos para manipular datas e ho
 
 // console.log(`${day}/${month}/${year}`);
 
-/*
+/*  AULA 06 - JavaScript
 Convertendo uma data para string
 Nesta aula, iremos conhecer métodos para converter data e hora em strings específicas. Essas conversões são úteis para formatar datas e horas de maneira específica em JavaScript.
 */
@@ -112,17 +112,75 @@ Nesta aula, iremos conhecer métodos para converter data e hora em strings espec
 // console.log(date.toDateString()); // Converte a data para string de data
 // console.log(date.toTimeString()); // Converte a data para string de hora
 
-/*
+/* AULA 07 - JavaScript
 Exibindo data e hora formatadas de acordo com a localidade
 Nesta aula, iremos aprender a exibir datas e horas de acordo com a localidade do usuário. Utilizaremos o toLocaleString para formatar a data e hora de acordo com a localidade do usuário.
 */
 // Exibe a data e hora formatada de acordo com a localidade do usuário
-let date = new Date("2024-07-02T14:30:00");
-console.log(date.toLocaleString());
-console.log(date.toLocaleDateString()); //  Exibe apenas a data
-console.log(date.toLocaleTimeString()); // Exibe apenas a hora
+// let date = new Date("2024-07-02T14:30:00");
+// console.log(date.toLocaleString());
+// console.log(date.toLocaleDateString()); //  Exibe apenas a data
+// console.log(date.toLocaleTimeString()); // Exibe apenas a hora
 
-// Exibe a data e hora no formato escolhido pelo usuário
-console.log(date.toLocaleString("en"));
-console.log(date.toLocaleDateString("en"));
-console.log(date.toLocaleTimeString("en"));
+// // Exibe a data e hora no formato escolhido pelo usuário
+// console.log(date.toLocaleString("en"));
+// console.log(date.toLocaleDateString("en"));
+// console.log(date.toLocaleTimeString("en"));
+
+/*  AULA 08 - JavaScript
+Usando o toLocaleString()
+Nesta aula, vamos aprender o método toLocaleString(), um recurso poderoso para formatação de data e hora.
+*/
+
+let date = new Date("2024-07-02T14:30:10");
+// console.log(date.toLocaleString());
+
+// console.log(date.toLocaleString("pt-BR")); // Formato brasileiro
+// console.log(date.toLocaleString("en-US")); // Formato americano
+// console.log(date.toLocaleString("en-GB")); // Formato britânico
+// console.log(date.toLocaleString("fr-FR")); // Formato francês
+// console.log(date.toLocaleString("de-DE")); // Formato alemão
+// console.log(date.toLocaleString("es-ES")); // Formato espanhol
+// console.log(date.toLocaleString("it-IT")); // Formato italiano
+// console.log(date.toLocaleString("ja-JP")); // Formato japonês
+// console.log(date.toLocaleString("zh-CN")); // Formato chinês
+// console.log(date.toLocaleString("ar-SA")); // Formato árabe
+// console.log(date.toLocaleString("ru-RU")); // Formato russo
+// console.log(date.toLocaleString("pt-PT")); // Formato português de Portugal
+
+console.log(
+    date.toLocaleString("pt-BR", {
+        dateStyle: "short"
+    })
+)
+console.log(
+    date.toLocaleString("pt-BR", {
+        dateStyle: "long"
+    })
+)
+console.log(
+    date.toLocaleString("pt-BR", {
+        dateStyle: "medium"
+    })
+)
+
+console.log(
+    date.toLocaleString("pt-BR", {
+        dateStyle: "full"
+    })
+)
+
+console.log(
+    date.toLocaleDateString("pt-BR", {
+        day: "2-digit",
+        month: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+    })
+)
+
+let amount = 12.5;
+console.log(amount.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL"
+}));
