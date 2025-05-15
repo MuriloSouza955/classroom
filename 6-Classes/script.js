@@ -1,23 +1,26 @@
-/*  AULA 08 - Clases em JavaScript
-Aprendendo sobre herança e cadeia de protótipos
-Nesta aula, vamos aprender o conceito de prototype chain no JavaScript, que se baseia em herança e cadeia de protótipos. Vamos entender como objetos herdam propriedades e métodos de seus protótipos ascendentes, até chegar a um protótipo com valor nulo, finalizando a cadeia.
+/*  AULA 10 - Clases em JavaScript
+Como utilizar classes pra lidar com exceções
+Nesta aula, aprenderemos a utilizar classes para lidar com exceções específicas em JavaScript. Vamos ver como identificar e tratar diferentes tipos de erros, como TypeError e RangeError. Também foi abordado o uso do método throwNew para gerar exceções personalizadas. Vamos mostrar a importância de tratar exceções de forma específica e amigável para o usuário, assim como a possibilidade de encadear diferentes tipos de exceções.
 */
 
-/*  AULA 09 - Prototypes em JavaScript
-Criando um objeto prototype
-Nesta aula, exploraremos a herança de objetos em JavaScript, demonstrando na prática o uso do prototype. Vamos aprender como objetos como endereço e arrays possuem protótipos que podem ser explorados para entender a cadeia de herança. Compreender essa estrutura de herança em JavaScript é fundamental para aprofundar seus conhecimentos na linguagem.
-*/
+let obj = [17, 42, 13, 99, 100, 110, 120];
+let index = 300
 
-const address = {
-  city: "São Paulo",
-  country: "Brasil",
-};
-
-console.log(address);
-
-const users = ["Murilo", "João", "Pedro", "Maria"];
-
-console.log(users);
-
-const user_name = "Murilo Souza";
-console.log(user_name.__proto__);
+try {
+  if (!obj.includes(17)) {
+    throw new Error("Não foi possível encontrar o valor 17 no objeto");
+  }
+  if (index > 99) {
+    throw new RangeError("O valor do índice é maior que 99");
+  }
+} catch (e) {
+  if (e instanceof TypeError) {
+    console.log(e);
+  }
+  if (e instanceof RangeError) {
+    console.log(e.message);
+  } else {
+    console.log("Erro desconhecido");
+  }
+//   console.log(e);
+}
